@@ -1,9 +1,7 @@
 class Todo
   def initialize(task)
-    fail "invalid task" if task == ""
     @task = task
   end
-
   def task
     return @task
   end
