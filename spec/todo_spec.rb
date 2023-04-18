@@ -13,4 +13,16 @@ RSpec.describe Todo do
       expect { Todo.new }.to raise_error "invalid task"
     end
   end
+ 
+  context "when a task is marked as done" do 
+    it "#done? return true" do 
+      todo = Todo.new("task1")
+      todo.mark_done!
+      expect(todo.done?).to eq true
+       
+    end
+
+  end 
+
+
 end

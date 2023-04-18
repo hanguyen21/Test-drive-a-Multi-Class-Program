@@ -1,18 +1,24 @@
 class Todo
   def initialize(task)
     @task = task
+    @status = "incomplete"
   end
+
   def task
     return @task
   end
 
   def mark_done!
-    # Marks the todo as done
-    # Returns nothing
+    @status = "complete"
   end
 
+  
+
   def done?
-    # Returns true if the task is done
-    # Otherwise, false
+    if @status == "complete"
+      return true 
+    else
+     return false
+    end
   end
 end

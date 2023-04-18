@@ -12,7 +12,7 @@ class TodoList
   end
 
   def complete
-    # Returns all complete todos
+    return @todo_list
   end
 
   def give_up!
