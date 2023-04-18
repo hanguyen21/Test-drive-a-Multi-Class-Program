@@ -8,14 +8,14 @@ class TodoList
   end
 
   def incomplete
-    return @todo_list
+    return @todo_list.reject{ |todo| todo.done? }
   end
 
   def complete
-    return @todo_list
+    return @todo_list.filter{ |todo| todo.done? }
   end
 
   def give_up!
-    # Marks all todos as complete
+    @todo_list.map {|todo| todo.mark_done! }
   end
 end

@@ -12,8 +12,6 @@ class Todo
     @status = "complete"
   end
 
-  
-
   def done?
     if @status == "complete"
       return true 
